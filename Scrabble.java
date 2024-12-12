@@ -107,7 +107,7 @@ public class Scrabble {
 	// into it, at random indexes, the letters 'a' and 'e'
 	// (these two vowels make it easier for the user to construct words)
 	public static String createHand() {
-		return MyString.insertRandomly('a',MyString.insertRandomly('c',MyString.randomStringOfLetters(HAND_SIZE - 2)));
+		return MyString.insertRandomly('a',MyString.insertRandomly('e',MyString.randomStringOfLetters(HAND_SIZE - 2)));
 	}
 	
     // Runs a single hand in a Scrabble game. Each time the user enters a valid word:
@@ -141,7 +141,7 @@ public class Scrabble {
 			cwordscore = wordScore(input);
 			score += cwordscore;
 			hand = MyString.remove(hand, input);
-			System.out.println(input + "earned " + cwordscore + " points. Score: " + score + "points.");
+			System.out.println(input + " earned " + cwordscore + " points. Score: " + score + " points.");
 		}
 		if (hand.length() == 0) {
 	        System.out.println("Ran out of letters. Total score: " + score + " points\n");

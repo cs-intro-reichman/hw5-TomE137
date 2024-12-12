@@ -51,9 +51,8 @@ public class MyString {
                 str1 = str1.substring(1);
                 i = 0;
                 counter++;
-            }else{
-                i++;
             }
+            i++;
         }
         return counter==0;
     }
