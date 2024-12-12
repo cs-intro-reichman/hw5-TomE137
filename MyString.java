@@ -44,17 +44,15 @@ public class MyString {
         if(str1.length() > str2.length() || str1.length() == 0) {
             return str1.length()==0;
         }
-        int i = 0, counter = -str1.length();
-        while(i < str2.length() && counter < 0) {
-            if(str1.charAt(0) == str2.charAt(i)) {
-                str2 = str2.substring(0,i) + str2.substring(i);
-                str1 = str1.substring(1);
-                i = 0;
-                counter++;
+        int index=0;
+        for (int i = 0; i < str1.length(); i++) {
+            index = str2.indexOf(str1.charAt(i));
+            if (index == -1) {
+                return false;
             }
-            i++;
+            str2 = str2.substring(0, index) + str2.substring(index+1);
         }
-        return counter==0;
+        return true;
     }
 
     /** Returns a string which is the same as the given string, with a space

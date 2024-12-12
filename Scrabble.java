@@ -181,8 +181,8 @@ public class Scrabble {
 		// testBuildingTheDictionary();  
 		// testScrabbleScore();    
 		// testCreateHands();  
-		// testPlayHands();
-		playGame();
+		testPlayHands();
+		//playGame();
 	}
 
 	public static void testBuildingTheDictionary() {
@@ -208,8 +208,8 @@ public class Scrabble {
 	}
 	public static void testPlayHands() {
 		init();
-		playHand("ocostrza");
-		playHand("arbffip");
 		playHand("aretiin");
+		// playHand("arbffip");
+		// playHand("aretiin");
 	}
 }
